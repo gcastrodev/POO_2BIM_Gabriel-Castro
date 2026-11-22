@@ -3,14 +3,14 @@
 Projeto da avaliação do 2º bimestre de Programação Orientada a Objetos.
 Aplicação de console em Java 21 com Spring Boot (Spring JDBC) e MariaDB.
 
-- **Integrante(s):** [nome(s)]
-- **Turma:** [turma]
+- **Integrante:** Gabriel Castro
+- **Turma:** Engenharia de Software
 - **SGBD:** MariaDB (uso autorizado pelo professor)
 
 ## Requisitos
 
 - JDK 21
-- MariaDB 10.x em execução local
+- MariaDB 13.0.2 em execução local
 - Maven Wrapper (já incluso: `./mvnw`)
 
 ## Configuração do banco
