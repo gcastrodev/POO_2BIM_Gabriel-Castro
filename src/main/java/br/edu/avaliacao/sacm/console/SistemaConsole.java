@@ -8,6 +8,7 @@ import br.edu.avaliacao.sacm.model.Medico;
 import br.edu.avaliacao.sacm.model.Paciente;
 import br.edu.avaliacao.sacm.service.ConsultaService;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
@@ -43,6 +44,9 @@ public class SistemaConsole implements CommandLineRunner {
       } catch (RegraNegocioException e) {
         // RN09: mensagem compreensível; a causa técnica continua em e.getCause()
         System.out.println("\n[ERRO] " + e.getMessage());
+      } catch (DataAccessException e) {
+        System.out.println("\n[ERRO TÉCNICO] Falha ao acessar o banco de dados: "
+            + e.getMostSpecificCause().getMessage());
       } catch (NoSuchElementException e) {
         executando = false;   // entrada do teclado encerrada
       }
