@@ -1,8 +1,8 @@
 package br.edu.avaliacao.sacm.exception;
 
-public class ConflitoHorarioException extends RuntimeException {
-  public ConflitoHorarioException(String message) {
+public class ConflitoHorarioException extends RegraNegocioException {
 
-    super(message);
+  public ConflitoHorarioException(String mensagem) {
+    super(mensagem);
   }
 }
